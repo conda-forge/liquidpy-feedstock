@@ -1,5 +1,5 @@
 {% set name = "liquidpy" %}
-{% set version = "0.6.3" %}
+{% set version = "0.6.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/liquidpy-{{ version }}.tar.gz
-  sha256: 9d9926fc1fa700c88135f84c15130f0d33c189c021972c04b0f9c1fa5554f300
+  sha256: 9a123aad8765086146d96a5a0b38cbae06565b741d6fde8f87290afdbe1ff0cf
 
 build:
   number: 0
@@ -40,10 +40,7 @@ about:
   summary: A port of liquid template engine for python
   license: Apache-2.0
   license_file: LICENSE
-  description:
-    A port of liquid template engine for python.
-    This is compatible with standard Liquid template engine.
-    Variations, such as Shopify and Jekyll are not fully supported yet.
+  description: A port of liquid template engine for python. This is compatible with standard Liquid template engine. Variations, such as Shopify and Jekyll are not fully supported yet.
 
 extra:
   recipe-maintainers:
