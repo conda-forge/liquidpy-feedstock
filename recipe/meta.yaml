@@ -8,6 +8,9 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/liquidpy-{{ version }}.tar.gz
   sha256: 9f5fefccb5f48dd31a49d78d289786527946e51508392d9353299c8be35c2d06
+  patches:
+    # remove optional dependency (pip doesn't understand 'optional')
+    - no-frontmatter.patch
 
 build:
   number: 0
@@ -20,10 +23,8 @@ requirements:
     - poetry >=0.12
     - python >=3.6
   run:
-    - diot
-    - lark-parser <1.0.0
     - python >=3.6
-    - rich >=9.0.0,<10.0.0
+    - jinja2 >=3.0.0,<4.0.0
 
 test:
   requires:
