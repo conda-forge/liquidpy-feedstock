@@ -9,8 +9,8 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/liquidpy-{{ version }}.tar.gz
   sha256: 24045ee6733616373f51a867fd728ebc6a9867c06f02bf6bfb961171e54dd3c7
   patches:
-    # remove optional dependency (pip doesn't understand 'optional')
-    - no-frontmatter.patch
+    # remove optional dependencies (pip doesn't understand 'optional')
+    - no-optional-dependencies.patch
 
 build:
   number: 0
