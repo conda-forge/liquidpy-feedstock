@@ -9,6 +9,8 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/liquidpy-{{ version }}.tar.gz
   sha256: 24045ee6733616373f51a867fd728ebc6a9867c06f02bf6bfb961171e54dd3c7
   patches:
+    # use poetry-core
+    - poetry-core.patch
     # remove optional dependencies (pip doesn't understand 'optional')
     - no-optional-dependencies.patch
 
@@ -20,7 +22,7 @@ build:
 requirements:
   host:
     - pip
-    - poetry >=0.12
+    - poetry-core
     - python >=3.6
   run:
     - python >=3.6
