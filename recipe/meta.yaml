@@ -21,7 +21,7 @@ build:
 
 requirements:
   host:
-    - pip
+    - pip <21.3
     - poetry-core
     - python >=3.6
   run:
