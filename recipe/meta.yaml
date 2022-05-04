@@ -11,8 +11,6 @@ source:
   patches:
     # use poetry-core
     - poetry-core.patch
-    # remove optional dependencies (pip doesn't understand 'optional')
-    - no-optional-dependencies.patch
 
 build:
   number: 0
@@ -21,11 +19,11 @@ build:
 
 requirements:
   host:
-    - pip <21.3
+    - pip
     - poetry-core
-    - python >=3.6
+    - python >=3.6,<4.0.0
   run:
-    - python >=3.6
+    - python >=3.6,<4.0.0
     - jinja2 >=3.0.0,<4.0.0
 
 test:
