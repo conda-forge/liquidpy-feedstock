@@ -1,11 +1,11 @@
-About liquidpy
-==============
+About liquidpy-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/liquidpy-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/pwwang/liquidpy
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/liquidpy-feedstock/blob/main/LICENSE.txt)
 
 Summary: A port of liquid template engine for python
 
