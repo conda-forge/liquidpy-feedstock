@@ -1,5 +1,5 @@
 {% set name = "liquidpy" %}
-{% set version = "0.7.5" %}
+{% set version = "0.7.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/liquidpy-{{ version }}.tar.gz
-  sha256: 54725bcbd6d29db854ba053c803826769080a01d7e2681067af9472187e83bc8
+  sha256: d6cb83df89a3f0919b9dc659767e09e193ca369bdeef3ccd8c7e40e64da061e3
   patches:
     # use poetry-core
     - poetry-core.patch
