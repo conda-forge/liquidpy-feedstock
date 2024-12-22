@@ -6,14 +6,14 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/liquidpy-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/liquidpy-{{ version }}.tar.gz
   sha256: ff7c1752bed93f4e2e90b35919b081e50ad290b82acbd4402c6fa37b2762a497
   patches:
     # use poetry-core
     - poetry-core.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,14 +21,15 @@ requirements:
   host:
     - pip
     - poetry-core
-    - python >=3.7,<4.0.0
+    - python {{ python_min }}
   run:
-    - python >=3.7,<4.0.0
+    - python >={{ python_min }},<4.0.0
     - jinja2 >=3.0.0,<4.0.0
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - liquid
   commands:
