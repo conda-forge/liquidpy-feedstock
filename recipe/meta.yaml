@@ -8,9 +8,6 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/liquidpy-{{ version }}.tar.gz
   sha256: 5fbffc4db5f31f815aecdfdc07c89761404a3fcdf5a03fd8563093bd63b6fd6a
-  patches:
-    # use poetry-core
-    - poetry-core.patch
 
 build:
   number: 0
@@ -20,7 +17,7 @@ build:
 requirements:
   host:
     - pip
-    - poetry-core
+    - hatchling
     - python {{ python_min }}
   run:
     - python >={{ python_min }},<4.0.0
