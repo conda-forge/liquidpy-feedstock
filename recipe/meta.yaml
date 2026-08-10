@@ -1,5 +1,5 @@
 {% set name = "liquidpy" %}
-{% set version = "0.9.0" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/liquidpy-{{ version }}.tar.gz
-  sha256: 5fbffc4db5f31f815aecdfdc07c89761404a3fcdf5a03fd8563093bd63b6fd6a
+  sha256: 26fe12b666a321890722ac845968f53cfeb2c731557fe8e6d130b06178e7ac14
 
 build:
   number: 0
