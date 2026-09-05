@@ -1,0 +1,48 @@
+schema_version: 1
+
+context:
+  name: liquidpy
+  version: "0.10.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/liquidpy-${{ version }}.tar.gz
+  sha256: 26fe12b666a321890722ac845968f53cfeb2c731557fe8e6d130b06178e7ac14
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - hatchling
+    - python ${{ python_min }}.*
+  run:
+    - python >=${{ python_min }},<4.0.0
+    - jinja2 >=3.0.0,<4.0.0
+
+tests:
+  - python:
+      imports:
+        - liquid
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  summary: A port of liquid template engine for python
+  license: Apache-2.0
+  license_file: LICENSE
+  description: A port of liquid template engine for python. This is compatible with standard Liquid template engine. Variations, such as Shopify and Jekyll are not fully supported yet.
+  homepage: https://github.com/pwwang/liquidpy
+  repository: https://github.com/pwwang/liquidpy.git
+  documentation: https://pwwang.github.io/liquidpy/
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
+    - duncanmmacleod
