@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: liquidpy
-  version: "0.10.0"
+  version: "0.10.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/liquidpy-${{ version }}.tar.gz
-  sha256: 26fe12b666a321890722ac845968f53cfeb2c731557fe8e6d130b06178e7ac14
+  sha256: b12406e5f18619bb256422363b36e0adad479e9294e8efb778428cfccd453f5a
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
